@@ -20,9 +20,17 @@ type Vulnerability struct {
 	PluginFamily       string `json:"plugin_family"`
 }
 
+type ScanInfo struct {
+	Targets         string `json:"targets"`
+	Status         string `json:"status"`
+	ScannerName         string `json:"scanner_name"`
+	ScanType         string `json:"scan_type"`
+}
+
+
 type ScanDetail struct {
 	ID              int64
-	Targets         string `json:"targets"`
+	Info         *ScanInfo `json:"info"`
 	Vulnerabilities []Vulnerability `json:"vulnerabilities"`
 }
 
