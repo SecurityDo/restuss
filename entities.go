@@ -22,6 +22,7 @@ type Vulnerability struct {
 
 type ScanDetail struct {
 	ID              int64
+	Targets         string `json:"targets"`
 	Vulnerabilities []Vulnerability `json:"vulnerabilities"`
 }
 
